@@ -1119,7 +1119,7 @@ const WOODS = {
     why:'Для классических интерьеров, резных рам и вещей большого размера, где важны орнамент и бюджет, а нагрузка невысокая.',
     uses:['Резные рамы','Классические зеркала','Декор'],
     m:{hard:1, tex:3, tone:2, bend:3}},
-  maple:{name:'Клён', lat:'Acer · клён', img:'mat-maple', cap:'Фигурный клён с волнистым рисунком. Фото: Philipp Zinger, CC BY-SA 4.0', short:'светлые акценты',
+  maple:{name:'Клён', lat:'Acer · клён', img:'mat-maple', cap:'Окантовка из фигурного клёна на зеркале «Арт»', sw:'9% 40%', short:'светлые акценты',
     tagline:'Светлая, очень плотная древесина для контраста и тонких деталей.',
     body:['Клён почти белый, с тонкой однородной текстурой, а иногда с «огненным» волнистым рисунком. Он твёрдый и плотный, поэтому из него получаются тонкие ровные рейки, которые не крошатся.','Мы используем клён как акцент: светлая окантовка подчёркивает тёмный орех, как на зеркале «Арт». Так рама выглядит собранной и графичной.'],
     plus:['Очень светлый тон: лучший контраст с орехом','Плотный и твёрдый, держит тонкие детали','Тонкая ровная текстура','Иногда встречается волнистый «огненный» рисунок'],
@@ -1228,7 +1228,7 @@ $('#faq').innerHTML = FAQ.map(([q,a]) => `<details><summary>${q}</summary><p>${a
 const WKEYS = Object.keys(WOODS);
 let wood = 'karagach';
 const madeOf = k => ITEMS.filter(i => i.w.includes(k));
-$('#wtabs').innerHTML = WKEYS.map(k => `<button type="button" role="tab" data-wood="${k}" aria-selected="false"><i style="background-image:url(img/${WOODS[k].img}.jpg)"></i><span><b>${WOODS[k].name}</b><small>${WOODS[k].short}</small></span></button>`).join('');
+$('#wtabs').innerHTML = WKEYS.map(k => `<button type="button" role="tab" data-wood="${k}" aria-selected="false"><i style="background-image:url(img/${WOODS[k].img}.jpg);background-position:${WOODS[k].sw || 'center'}"></i><span><b>${WOODS[k].name}</b><small>${WOODS[k].short}</small></span></button>`).join('');
 const bar = n => `<span class="bar">${[1,2,3,4,5].map(x => `<i class="${x <= n ? 'on' : ''}"></i>`).join('')}</span>`;
 function renderWood(k){
   wood = WOODS[k] ? k : 'karagach';
