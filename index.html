@@ -132,10 +132,10 @@ header.top .btn{padding:.85em 1.25em;font-size:.8rem}
 /* занавес при смене страниц */
 .curtain{position:fixed;inset:0;z-index:90;background:var(--stage);background-color:var(--ink);display:grid;place-items:center;transform:translateY(100%);pointer-events:none}
 .curtain::before{content:"";position:absolute;left:0;right:0;top:0;height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent)}
-.curtain .c-in{display:grid;justify-items:center;gap:18px;opacity:0;transition:opacity .3s}
+.curtain .c-in{display:grid;justify-items:center;gap:26px;opacity:0;transition:opacity .3s}
 .curtain.shown .c-in{opacity:1}
-.curtain img{width:min(150px,36vw);height:auto}
-.curtain span{font-family:var(--f-display);font-size:clamp(1.6rem,3vw,2.2rem);letter-spacing:.12em;color:var(--ivory)}
+.curtain img{width:min(320px,64vw);height:auto}
+.curtain span{font-family:var(--f-display);font-size:clamp(1.8rem,3.4vw,2.6rem);letter-spacing:.12em;color:var(--ivory)}
 .js .curtain.boot{transform:none}
 
 /* страницы */
@@ -619,7 +619,7 @@ dialog[open]{background:#080706}
         <article class="woodcard" data-r><div class="ph"><img src="img/tex-walnut.jpg" alt="Чёрный орех со светлыми прожилками на столе «Луссо»" loading="lazy"></div>
           <h3>Чёрный орех</h3><div class="lat">Juglans nigra</div>
           <p>Для наших широт порода редкая. В одной доске встречаются белый, коричневый и фиолетовый тона. Мы компонуем их так, чтобы светлые прожилки стали рисунком столешницы, как в столе «Луссо».</p></article>
-        <article class="woodcard" data-r="2"><div class="ph"><img src="img/tex-karagach.jpg" alt="Рисунок карагача на столешнице стола «Филин»" loading="lazy"></div>
+        <article class="woodcard" data-r="2"><div class="ph"><img src="img/tex-karagach.jpg" alt="Свилеватый рисунок карагача" loading="lazy"></div>
           <h3>Карагач</h3><div class="lat">Ulmus pumila</div>
           <p>Выразительная текстура и высокая прочность. По техническим характеристикам и долговечности карагач не уступает дубу, а кое в чём его превосходит. Из него сделано зеркало «Белла».</p></article>
         <article class="woodcard" data-r="3"><div class="ph"><img src="img/tex-oak.jpg" alt="Текстура дуба" loading="lazy"></div>
@@ -1091,7 +1091,7 @@ const HIDDEN = [
 const CATS = [['all','Все'],['mirror','Зеркала'],['table','Столы'],['door','Двери']];
 
 const WOODS = {
-  karagach:{name:'Карагач', lat:'Ulmus pumila · вяз приземистый', img:'mat-karagach', cap:'Столешница стола «Филин» из карагача', short:'гнутые рамы, столы',
+  karagach:{name:'Карагач', lat:'Ulmus pumila · вяз приземистый', img:'mat-karagach', cap:'Свилеватый вяз (карагач). Фото: Philipp Zinger, CC BY-SA 4.0', short:'гнутые рамы, столы',
     tagline:'Прочная, как дуб, и с выразительным рисунком, который не повторяется от доски к доске.',
     body:['Карагач — это вяз приземистый, он растёт в Сибири, на Дальнем Востоке и в Средней Азии. Волокна у него переплетены, поэтому древесина плотная и вязкая: она не раскалывается, хорошо гнётся и держит форму. Именно поэтому из карагача мы делаем зеркала с толстыми гнутыми рамами.','У карагача тёмное ядро и светлая заболонь. Если раскроить доску правильно, на столешнице появляются «глаза» и разводы, как на столе «Филин», а на раме зеркала — светлые прожилки, как на «Фаворите».'],
     plus:['По прочности и долговечности не уступает дубу','Хорошо гнётся: подходит для плавных, изогнутых форм','Не раскалывается от ударов и креплений','Выразительная текстура: у каждой доски свой рисунок'],
