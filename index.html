@@ -1074,12 +1074,12 @@ const ITEMS = [
   {id:'drop', cat:'mirror', name:'Капля', kind:'Настенное зеркало', w:['karagach'], size:'80 × 50 см', desc:'Тонкий носик сверху и тяжёлая округлая рама снизу.', imgs:['drop-s1','drop-s2']},
   {id:'amore', cat:'mirror', name:'Аморэ', kind:'Настенное зеркало', w:['karagach'], size:'70 × 90 см', desc:'Зеркало-сердце для ванной, спальни или в подарок.', imgs:['amore-s1','amore-s2']},
   {id:'art', cat:'mirror', name:'Арт', kind:'Зеркало в наборной раме', w:['walnut','maple'], size:'80 × 60 см', desc:'Рама собрана из брусков чёрного ореха разного тона и окантована светлым клёном.', imgs:['art-s1','art-s2']},
-  {id:'lusso', cat:'table', name:'Луссо', kind:'Обеденный стол', w:['walnut'], desc:'Светлые прожилки заболони специально выложены рисунком по глянцевой столешнице.', specs:[['Длина','160 см'],['Ширина','80 см'],['Столешница','4 см']], imgs:['lusso-s1','lusso-s3','lusso-s2'], video:'lusso'},
+  {id:'lusso', cat:'table', name:'Луссо', kind:'Обеденный стол', w:['walnut'], desc:'Светлые прожилки заболони специально выложены рисунком по глянцевой столешнице.', specs:[['Длина','160 см'],['Ширина','80 см'],['Столешница','4 см']], imgs:['lusso-s1','lusso-s3','lusso-s2','lusso-s4'], video:'lusso'},
   {id:'kamelot', cat:'table', name:'Камелот', kind:'Стол на фигурных опорах', w:['oak'], size:'200 × 80 × 75 см', desc:'Фигурные опоры, перекладина и толстая столешница с профилем. Стоит в гостиной заказчика.', imgs:['kamelot-s1','kamelot-s2','kamelot-s3','kamelot-s4']},
-  {id:'gusto', cat:'table', name:'Густо', kind:'Обеденный стол', w:['walnut'], size:'190 × 80 × 80 см', desc:'Лёгкий современный стол на наклонных ножках со светлыми прожилками.', imgs:['gusto-s2','gusto-s1']},
-  {id:'filin', cat:'table', name:'Филин', kind:'Обеденный стол', w:['karagach'], size:'140 × 80 × 80 см', desc:'Столешница с крупным живым рисунком древесины и строгие тёмные ножки.', imgs:['filin-s1','filin-s2']},
-  {id:'stand', cat:'table', name:'Приставной столик', kind:'Для дивана', w:['walnut'], desc:'Основание заходит под диван, полка нависает над сиденьем.', imgs:['stand-1']},
-  {id:'rays', cat:'door', name:'Лучи', kind:'Межкомнатная дверь', w:[], tech:'массив, фрезеровка на ЧПУ', desc:'Сотни лучей расходятся от ручки по всему полотну, а с обратной стороны полотна идут концентрические дуги. Дверь становится главной вещью в комнате.', imgs:['rays-1','rays-2']},
+  {id:'gusto', cat:'table', name:'Густо', kind:'Обеденный стол', w:['walnut'], size:'190 × 80 × 80 см', desc:'Лёгкий современный стол на наклонных ножках со светлыми прожилками.', imgs:['gusto-s2','gusto-s1','gusto-s3','gusto-s4']},
+  {id:'filin', cat:'table', name:'Филин', kind:'Обеденный стол', w:['karagach'], size:'140 × 80 × 80 см', desc:'Столешница с крупным живым рисунком древесины и строгие тёмные ножки.', imgs:['filin-s1','filin-s2','filin-s3']},
+  {id:'stand', cat:'table', name:'Приставной столик', kind:'Для дивана', w:['walnut'], desc:'Основание заходит под диван, полка нависает над сиденьем.', imgs:['stand-1','stand-2']},
+  {id:'rays', cat:'door', name:'Лучи', kind:'Межкомнатная дверь', w:[], tech:'массив, фрезеровка на ЧПУ', desc:'Сотни лучей расходятся от ручки по всему полотну, а с обратной стороны полотна идут концентрические дуги. Дверь становится главной вещью в комнате.', imgs:['rays-1','rays-2','rays-3']},
   {id:'wave', cat:'door', name:'Резная дверь', kind:'Межкомнатная дверь', w:['oak'], tech:'водостойкий лак', desc:'Объёмные волны по всему полотну. Такие двери стоят в санузле нашего офиса и не боятся влаги.', imgs:['wave-1'], video:'oak-door'},
 ];
 const FEATURED = ['bella','lusso','rays','kamelot'];
@@ -1168,6 +1168,8 @@ const VIDEOS = [
 ];
 const PAGES = {home:'Мебель из массива на заказ в Благовещенске — мастерская «Крона»', collection:'Коллекция', materials:'Материалы', workshop:'Мастерская', video:'Видеообзоры', contacts:'Контакты', order:'Обсудить заказ'};
 const src = n => `img/${n}.webp`;
+const HD = new Set('alma-s1 alma-s2 amore-s1 amore-s2 art-s1 art-s2 aura-s1 aura-s2 bella-1 diplomat-s1 diplomat-s2 drop-s1 drop-s2 favorit-s1 favorit-s2 gracia-s1 gracia-s2 ideal-s1 ideal-s2 koko-s1 koko-s2 lusso-s1 lusso-s2 lusso-s3 lusso-s4 kamelot-s1 kamelot-s2 kamelot-s3 kamelot-s4 gusto-s1 gusto-s2 gusto-s3 gusto-s4 filin-s1 filin-s2 filin-s3 stand-1 stand-2 rays-2 rays-3 wave-1'.split(' '));
+const hd = n => HD.has(n) ? `img/hd/${n}.webp` : src(n);   // крупные версии для просмотра на весь экран
 const $ = s => document.querySelector(s);
 const $$ = s => [...document.querySelectorAll(s)];
 const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -1375,7 +1377,7 @@ const lb = $('#lb'), lbImg = $('#lb-img'), thumbs = $('#lb-thumbs');
 let cur = null, idx = 0;
 function showImg(i){
   idx = (i + cur.imgs.length) % cur.imgs.length;
-  lbImg.src = src(cur.imgs[idx]);
+  lbImg.src = hd(cur.imgs[idx]);
   lbImg.alt = `${cur.kind} «${cur.name}», фото ${idx + 1}`;
   $('#lb-count').textContent = cur.imgs.length > 1 ? `${idx + 1} / ${cur.imgs.length}` : '';
   [...thumbs.children].forEach((t,k) => t.setAttribute('aria-current', k === idx));
