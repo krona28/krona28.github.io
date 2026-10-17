@@ -1324,6 +1324,7 @@ function activate(name){
   page.querySelectorAll('[data-r]').forEach(el => el.classList.remove('in'));
   observe(page);
   if (name === 'materials') materialsSub();
+  if (name === 'collection') { const id = location.hash.split('/')[2]; if (id && byId(id)) setTimeout(() => openItem(id), 400); }   // ссылка на изделие из каталога для дизайнеров
   if (name === 'video' && pendingVideo) {
     const card = $('#v-' + pendingVideo); pendingVideo = null;
     if (card) { setTimeout(() => { card.scrollIntoView({behavior: reduce ? 'auto' : 'smooth', block:'center'}); card.classList.add('flash'); setTimeout(() => card.classList.remove('flash'), 2200); }, 350); }
