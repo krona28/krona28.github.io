@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /materials/compare/
+
+Sitemap: https://krona28.github.io/sitemap.xml
