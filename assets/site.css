@@ -217,7 +217,7 @@ main{position:relative;z-index:2;min-height:70vh}
 /* обложка */
 .cover{padding-block:clamp(28px,5vw,64px) clamp(56px,7vw,96px)}
 .cover .wrap{display:grid;grid-template-columns:minmax(0,1.02fr) minmax(0,.98fr);gap:clamp(32px,5vw,80px);align-items:center;min-height:calc(100svh - 72px - 120px)}
-.cover h1{font-size:clamp(2.7rem,5.8vw,5.2rem);margin-block:22px 24px;letter-spacing:-.005em}
+.cover h1{font-size:clamp(2.2rem,3.9vw,3.7rem);margin-block:22px 24px;letter-spacing:-.005em}
 .cover .lead{font-size:1.1rem;color:var(--muted);max-width:48ch}
 .cover .ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:34px}
 .stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0;margin-top:44px;border-top:1px solid var(--line)}
